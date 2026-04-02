@@ -1,0 +1,236 @@
+/* ============================================================
+   base.css — Reset, Tipografia Global, Utilitários
+   Ordem de import: 2º arquivo
+   Depende de: variables.css, Bootstrap
+============================================================ */
+
+/* ── RESET ────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.35s var(--ease),
+              color 0.35s var(--ease);
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ── SCROLLBAR ────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-track  { background: var(--bg); }
+::-webkit-scrollbar-thumb  { background: var(--amarelo-dark); border-radius: 4px; }
+
+/* ── SELEÇÃO DE TEXTO ─────────────────────────────────────── */
+::selection {
+  background: var(--amarelo);
+  color: var(--azul);
+}
+
+/* ── TIPOGRAFIA GLOBAL ────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--text);
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* ── LAYOUT DE SEÇÕES ─────────────────────────────────────── */
+section {
+  padding: var(--section-py) 0;
+}
+
+.s-dark { background-color: var(--bg);  }
+.s-mid  { background-color: var(--bg2); }
+.s-blue { background-color: var(--azul); }
+
+@media (max-width: 575px) {
+  section {
+    padding: var(--section-py-sm) 0;
+  }
+}
+
+/* ── UTILITÁRIOS DE TEXTO ─────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--amarelo);
+  opacity: 0.5;
+}
+
+.sec-title {
+  font-size: var(--fs-title);
+  line-height: 0.95;
+  color: var(--text);
+}
+
+.sec-title .hl-y { color: var(--amarelo); }
+.sec-title .hl-g { color: var(--verde); }
+
+.sec-desc {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 540px;
+}
+
+/* ── SCROLL REVEAL ────────────────────────────────────────── */
+/* Animações aplicadas via JS (IntersectionObserver)          */
+/* classe .on é adicionada quando o elemento entra na viewport */
+
+.rv {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.65s var(--ease),
+              transform 0.65s var(--ease);
+}
+
+.rv-l {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.65s var(--ease),
+              transform 0.65s var(--ease);
+}
+
+.rv-r {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.65s var(--ease),
+              transform 0.65s var(--ease);
+}
+
+.rv.on,
+.rv-l.on,
+.rv-r.on {
+  opacity: 1;
+  transform: none;
+}
+
+/* Delays para animações em cascata */
+.d1 { transition-delay: 0.10s; }
+.d2 { transition-delay: 0.20s; }
+.d3 { transition-delay: 0.30s; }
+.d4 { transition-delay: 0.40s; }
+.d5 { transition-delay: 0.50s; }
+
+/* ── FAIXA DA BANDEIRA ────────────────────────────────────── */
+.flag-strip {
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--verde)   33%,
+    var(--amarelo) 33% 66%,
+    var(--azul)    66%
+  );
+}
+
+/* ── BACK TO TOP ──────────────────────────────────────────── */
+#btt {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: var(--z-btt);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--amarelo);
+  color: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: var(--shadow-y);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s var(--ease),
+              transform 0.3s var(--ease),
+              box-shadow 0.3s var(--ease);
+  pointer-events: none;
+}
+
+#btt.on {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+#btt:hover {
+  box-shadow: 0 10px 30px var(--amarelo-glow);
+  transform: translateY(-3px);
+}
+
+/* ── OVERRIDE BOOTSTRAP — alinhamento com design system ───── */
+
+/* Container máximo */
+.container {
+  max-width: 1200px;
+}
+
+/* Cor de texto do Bootstrap sobrescrita */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Badge padrão do Bootstrap */
+.badge {
+  font-family: var(--font-cond);
+  letter-spacing: 0.08em;
+}

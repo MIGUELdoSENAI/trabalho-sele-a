@@ -1,0 +1,99 @@
+/* ============================================================
+   variables.css — Design Tokens da Seleção Brasileira
+   Ordem de import: 1º arquivo a ser carregado
+============================================================ */
+
+/* ── TEMA ESCURO (padrão) ─────────────────────────────────── */
+:root {
+
+  /* Cores principais */
+  --verde:        #009c3b;
+  --verde-dark:   #006427;
+  --verde-glow:   rgba(0, 156, 59, 0.30);
+
+  --amarelo:      #ffdf00;
+  --amarelo-dark: #c9a800;
+  --amarelo-glow: rgba(255, 223, 0, 0.25);
+
+  --azul:         #002776;
+  --azul-mid:     #1a3a8f;
+  --azul-glow:    rgba(0, 39, 118, 0.35);
+
+  --dourado:      #d4af37;
+  --dourado-glow: rgba(212, 175, 55, 0.25);
+
+  /* Fundos */
+  --bg:           #060c18;
+  --bg2:          #0a1525;
+  --bg3:          #0e1d30;
+
+  /* Superfícies */
+  --surface:      rgba(255, 255, 255, 0.04);
+  --surface2:     rgba(255, 255, 255, 0.08);
+
+  /* Bordas */
+  --border:       rgba(255, 223, 0, 0.12);
+  --border2:      rgba(255, 255, 255, 0.07);
+
+  /* Textos */
+  --text:         #dde3ec;
+  --text-muted:   #6a82a0;
+  --text-light:   rgba(255, 255, 255, 0.55);
+
+  /* Tipografia */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-cond:    'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+
+  /* Tamanhos de fonte */
+  --fs-hero:      clamp(4rem, 13vw, 10.5rem);
+  --fs-title:     clamp(2.2rem, 5.5vw, 4.5rem);
+  --fs-subtitle:  clamp(1.1rem, 2.5vw, 1.8rem);
+  --fs-body:      clamp(0.88rem, 1.4vw, 1.05rem);
+  --fs-small:     0.8rem;
+  --fs-xs:        0.72rem;
+
+  /* Espaçamentos de seção */
+  --section-py:   5.5rem;
+  --section-py-sm: 3.8rem;
+
+  /* Bordas arredondadas */
+  --radius:       14px;
+  --radius-lg:    22px;
+  --radius-full:  9999px;
+
+  /* Sombras */
+  --shadow-sm:    0 2px 16px rgba(0, 0, 0, 0.20);
+  --shadow-md:    0 8px 32px rgba(0, 0, 0, 0.30);
+  --shadow-lg:    0 18px 56px rgba(0, 0, 0, 0.45);
+  --shadow-y:     0 8px 28px var(--amarelo-glow);
+  --shadow-g:     0 8px 28px var(--verde-glow);
+
+  /* Transições */
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-fast:   all 0.2s var(--ease);
+  --trans:        all 0.3s var(--ease);
+  --trans-slow:   all 0.55s var(--ease);
+
+  /* Z-index */
+  --z-nav:        1000;
+  --z-modal:      1050;
+  --z-btt:        990;
+}
+
+/* ── TEMA CLARO (override) ────────────────────────────────── */
+[data-theme="light"] {
+  --bg:           #f0f4f8;
+  --bg2:          #e4ecf4;
+  --bg3:          #ffffff;
+
+  --surface:      rgba(0, 0, 0, 0.03);
+  --surface2:     rgba(0, 0, 0, 0.06);
+
+  --border:       rgba(0, 39, 118, 0.11);
+  --border2:      rgba(0, 0, 0, 0.07);
+
+  --text:         #0d1b2a;
+  --text-muted:   #4a6080;
+  --text-light:   rgba(0, 20, 60, 0.55);
+}
