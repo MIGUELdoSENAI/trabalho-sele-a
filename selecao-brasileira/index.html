@@ -5,22 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Seleção Brasileira — Pentacampeã mundial. A história, os títulos e as lendas da Canarinha do Mundo."/>
   <title>Seleção Brasileira · A Canarinha do Mundo</title>
-
-  <!-- Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
-
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-
-  <!-- CSS próprio — SEMPRE nessa ordem -->
   <link rel="stylesheet" href="css/variables.css"/>
   <link rel="stylesheet" href="css/base.css"/>
   <link rel="stylesheet" href="css/components.css"/>
@@ -28,1049 +18,680 @@
 </head>
 <body>
 
-  <!-- ── FLAG TOPO ──────────────────────────────────────────── -->
-  <div class="flag-strip"></div>
+<div class="flag-strip"></div>
 
-  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
-  <nav id="nav" class="navbar navbar-expand-lg">
-    <div class="container">
-
-      <a href="#" class="navbar-brand brand">
-  <div class="brand-logo">
-    <img src="img/logo-cbf.png"
-         alt="Escudo CBF — Seleção Brasileira"
-         width="42" height="52"
-         loading="eager"/>
+<!-- ── NAVBAR ── -->
+<nav id="nav" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a href="#" class="navbar-brand brand">
+      <div class="brand-logo">
+        <img src="img/logo-cbf.png" alt="Escudo CBF — Seleção Brasileira" width="42" height="52" loading="eager"/>
+      </div>
+      <span class="brand-txt">SELEÇÃO <span class="hl">BRASILEIRA</span></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 ms-auto order-lg-last">
+      <button class="theme-btn" id="themeBtn" title="Alternar tema">
+        <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+      </button>
+      <button class="navbar-toggler border-0 p-1" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navContent"
+              aria-controls="navContent" aria-expanded="false" aria-label="Menu">
+        <i class="bi bi-list fs-4" style="color:var(--text)"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse ms-lg-4" id="navContent">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link nl" href="#historia">História</a></li>
+        <li class="nav-item"><a class="nav-link nl" href="#titulos">Títulos</a></li>
+        <li class="nav-item"><a class="nav-link nl" href="#lendas">Lendas</a></li>
+        <li class="nav-item"><a class="nav-link nl" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link nl" href="#timeline">Cronologia</a></li>
+        <li class="nav-item"><a class="nav-link nl" href="#faq">FAQ</a></li>
+      </ul>
+    </div>
   </div>
-  <span class="brand-txt">SELEÇÃO <span class="hl">BRASILEIRA</span></span>
-</a>
+</nav>
 
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-blob d-none d-xl-flex">
+    <i class="bi bi-trophy-fill"></i>
+    <span>5× Campeão<br>Mundial</span>
+  </div>
+  <div class="container hero-inner">
+    <div class="row" style="min-height:100vh;align-items:center">
+      <div class="col-lg-8 col-xl-7">
+        <div class="hero-tag rv"><i class="bi bi-flag-fill"></i> A Canarinha do Mundo</div>
+        <h1 class="hero-title rv d1">
+          <span class="hl-y">A MAIOR</span><br>SELEÇÃO<br>
+          <span class="hero-ghost">DO MUNDO</span>
+        </h1>
+        <p class="hero-sub rv d2">5 títulos mundiais. 22 Copas disputadas. A única nação presente em todas as edições da Copa do Mundo FIFA — e a única pentacampeã da história.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4 mb-5 rv d3">
+          <a href="#historia" class="cbtn cbtn-primary"><i class="bi bi-play-fill"></i> Explorar</a>
+          <a href="#titulos"  class="cbtn cbtn-outline"><i class="bi bi-trophy"></i> Os 5 Títulos</a>
+        </div>
+        <div class="d-flex flex-wrap gap-4 rv d4">
+          <div class="hero-stat"><div class="hero-stat-n counter" data-target="5">0</div><div class="hero-stat-l">Copas Ganhas</div></div>
+          <div class="hero-stat"><div class="hero-stat-n counter" data-target="22">0</div><div class="hero-stat-l">Participações</div></div>
+          <div class="hero-stat"><div class="hero-stat-n">237</div><div class="hero-stat-l">Gols em Copas</div></div>
+          <div class="hero-stat"><div class="hero-stat-n counter" data-target="76">0</div><div class="hero-stat-l">Vitórias</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><i class="bi bi-chevron-down"></i></div>
+</section>
 
-      <div class="d-flex align-items-center gap-2 ms-auto order-lg-last">
-        <button class="theme-btn" id="themeBtn" title="Alternar tema">
-          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
-        </button>
-        <button class="navbar-toggler border-0 p-1" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navContent"
-                aria-controls="navContent" aria-expanded="false" aria-label="Menu">
-          <i class="bi bi-list fs-4" style="color: var(--text)"></i>
-        </button>
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>5 COPAS DO MUNDO</span><span class="dot">★</span>
+    <span>1958 · 1962 · 1970 · 1994 · 2002</span><span class="dot">★</span>
+    <span>ÚNICA EM TODAS AS EDIÇÕES</span><span class="dot">★</span>
+    <span>PELÉ · GARRINCHA · RONALDO · RONALDINHO · NEYMAR · ZICO</span><span class="dot">★</span>
+    <span>114 JOGOS · 76 VITÓRIAS · 237 GOLS</span><span class="dot">★</span>
+  </div>
+</div>
+
+<!-- ── STATS ── -->
+<section id="stats" class="s-mid">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Números</div>
+      <h2 class="sec-title rv d1">Recordes da <span class="hl-y">Canarinha</span></h2>
+    </div>
+    <div class="row g-3 g-md-4">
+      <div class="col-6 col-md-4 col-lg-3 rv d1"><div class="stat-card"><div class="stat-icon ico-yellow"><i class="bi bi-trophy-fill"></i></div><div class="stat-number counter" data-target="5">0</div><div class="stat-label">Copas do Mundo</div><p class="stat-desc">Único pentacampeão da história</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d2"><div class="stat-card"><div class="stat-icon ico-green"><i class="bi bi-lightning-fill"></i></div><div class="stat-number counter" data-target="76">0</div><div class="stat-label">Vitórias em Copas</div><p class="stat-desc">Maior número na história do torneio</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d3"><div class="stat-card"><div class="stat-icon ico-blue"><i class="bi bi-bullseye"></i></div><div class="stat-number counter" data-target="237">0</div><div class="stat-label">Gols Marcados</div><p class="stat-desc">Maior artilharia de todos os tempos</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d4"><div class="stat-card"><div class="stat-icon ico-gold"><i class="bi bi-calendar-check"></i></div><div class="stat-number counter" data-target="22">0</div><div class="stat-label">Participações</div><p class="stat-desc">Única seleção em todas as edições</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d1"><div class="stat-card"><div class="stat-icon ico-green"><i class="bi bi-shield-check"></i></div><div class="stat-number counter" data-target="114">0</div><div class="stat-label">Jogos Disputados</div><p class="stat-desc">72% de aproveitamento geral</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d2"><div class="stat-card"><div class="stat-icon ico-yellow"><i class="bi bi-graph-up-arrow"></i></div><div class="stat-number counter" data-target="129">0</div><div class="stat-label">Saldo de Gols</div><p class="stat-desc">237 marcados · 108 sofridos</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d3"><div class="stat-card"><div class="stat-icon ico-blue"><i class="bi bi-globe-americas"></i></div><div class="stat-number counter" data-target="4">0</div><div class="stat-label">Continentes Campeão</div><p class="stat-desc">Europa, Américas e Ásia</p></div></div>
+      <div class="col-6 col-md-4 col-lg-3 rv d4"><div class="stat-card"><div class="stat-icon ico-gold"><i class="bi bi-clock-history"></i></div><div class="stat-number">1914</div><div class="stat-label">Fundação</div><p class="stat-desc">Mais de um século de futebol arte</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HISTÓRIA ── -->
+<section id="historia" class="s-dark">
+  <div class="container">
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6 rv-l">
+        <div class="img-wrap">
+          <img src="img/historia-1.jpg" alt="Seleção Brasileira Copa 2014" width="640" height="420" loading="lazy"/>
+          <div class="img-badge"><div class="img-badge-year">1914</div><div class="img-badge-label">Primeiro jogo oficial</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 rv-r">
+        <div class="eyebrow">A Origem</div>
+        <h2 class="sec-title">Uma <span class="hl-y">Lenda</span> Que Nasceu</h2>
+        <p class="sec-desc mt-3">A Seleção disputou seu primeiro jogo em 1914 contra o Exeter City. De um começo humilde emergiu a maior potência do futebol mundial — forjada no trauma do Maracanazo de 1950 e renascida em 1958 com o primeiro título.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <span class="chip chip-green"><i class="bi bi-calendar"></i> 1914 — Origem</span>
+          <span class="chip chip-yellow"><i class="bi bi-shirt"></i> 1954 — Camisa amarela</span>
+          <span class="chip chip-blue"><i class="bi bi-globe"></i> 22 Copas participadas</span>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center g-5 flex-lg-row-reverse">
+      <div class="col-lg-6 rv-r">
+        <div class="img-wrap">
+          <img src="img/historia-2.jpg" alt="Seleção Brasileira Pentacampeonato 2002" width="640" height="420" loading="lazy"/>
+          <div class="img-badge"><div class="img-badge-year">2002</div><div class="img-badge-label">PENTA!</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 rv-l">
+        <div class="eyebrow">O Auge</div>
+        <h2 class="sec-title">Do Trauma ao <span class="hl-y">Penta</span></h2>
+        <p class="sec-desc mt-3">Em 2002 com Ronaldo, Rivaldo e Ronaldinho, o Brasil atingiu a perfeição: 7 jogos, 7 vitórias — tornando-se o único pentacampeão e o único a vencer a Copa em quatro continentes diferentes.</p>
+        <div class="quote-block mt-4">
+          <i class="bi bi-quote quote-icon"></i>
+          <p class="quote-text">"O Brasil é a única nação a ter vencido a Copa do Mundo em quatro continentes diferentes." <strong class="quote-author">— FIFA</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TÍTULOS ── -->
+<section id="titulos" class="s-mid">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Conquistas</div>
+      <h2 class="sec-title rv d1">As <span class="hl-y">Cinco Estrelas</span></h2>
+    </div>
+    <div id="copasCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators copas-indicators">
+        <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="0" class="active" aria-label="1958"></button>
+        <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="1" aria-label="1962"></button>
+        <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="2" aria-label="1970"></button>
+        <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="3" aria-label="1994"></button>
+        <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="4" aria-label="2002"></button>
+      </div>
+      <div class="carousel-inner copas-inner">
+        <div class="carousel-item active">
+          <div class="copa-card copa-card-solo">
+            <img src="img/copa-1958.jpg" alt="Copa 1958 Suécia" width="800" height="420" loading="lazy"/>
+            <div class="copa-overlay"></div>
+            <div class="copa-body">
+              <div class="copa-year">1958</div>
+              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Suécia</div>
+              <p class="copa-desc">Pelé, 17 anos, marca 2 na final. Brasil 5×2 Suécia.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="chip chip-green">Pelé — 17 anos</span>
+                <span class="chip chip-yellow">Garrincha</span>
+              </div>
+            </div>
+            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+            <div class="copa-tag">★ I</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="copa-card copa-card-solo">
+            <img src="img/copa-1962.jpg" alt="Copa 1962 Chile" width="800" height="420" loading="lazy"/>
+            <div class="copa-overlay"></div>
+            <div class="copa-body">
+              <div class="copa-year">1962</div>
+              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Chile</div>
+              <p class="copa-desc">Garrincha carrega o Brasil. Pelé se machuca na 2ª rodada.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="chip chip-green">Garrincha MVP</span>
+                <span class="chip chip-yellow">Vavá</span>
+              </div>
+            </div>
+            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+            <div class="copa-tag">★ II</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="copa-card copa-card-solo">
+            <img src="img/copa-1970.jpg" alt="Copa 1970 México" width="800" height="420" loading="lazy"/>
+            <div class="copa-overlay"></div>
+            <div class="copa-body">
+              <div class="copa-year">1970</div>
+              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>México</div>
+              <p class="copa-desc">A melhor seleção da história. 6 jogos, 6 vitórias, 19 gols.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="chip chip-green">Pelé tricampeão</span>
+                <span class="chip chip-yellow">Rivelino</span>
+              </div>
+            </div>
+            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+            <div class="copa-tag">★ III</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="copa-card copa-card-solo">
+            <img src="img/copa-1994.jpg" alt="Copa 1994 EUA" width="800" height="420" loading="lazy"/>
+            <div class="copa-overlay"></div>
+            <div class="copa-body">
+              <div class="copa-year">1994</div>
+              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Estados Unidos</div>
+              <p class="copa-desc">24 anos de espera. Romário e Bebeto. Tetra nos pênaltis contra a Itália.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="chip chip-green">Romário MVP</span>
+                <span class="chip chip-yellow">Bebeto</span>
+              </div>
+            </div>
+            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+            <div class="copa-tag">★ IV</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="copa-card copa-card-solo">
+            <img src="img/copa-2002.jpg" alt="Brasil 2002 Penta" width="800" height="420" loading="lazy"/>
+            <div class="copa-overlay"></div>
+            <div class="copa-body">
+              <div class="copa-year">2002</div>
+              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Coreia do Sul · Japão</div>
+              <p class="copa-desc">O PENTA! Ronaldo marca 2 na final. 7 jogos, 7 vitórias.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="chip chip-green">Ronaldo 8 gols</span>
+                <span class="chip chip-yellow">Rivaldo</span>
+                <span class="chip chip-blue">Ronaldinho</span>
+              </div>
+            </div>
+            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+            <div class="copa-tag">★ V</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev copas-prev" type="button" data-bs-target="#copasCarousel" data-bs-slide="prev">
+        <i class="bi bi-chevron-left"></i><span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next copas-next" type="button" data-bs-target="#copasCarousel" data-bs-slide="next">
+        <i class="bi bi-chevron-right"></i><span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── LENDAS ── -->
+<section id="lendas" class="s-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Ídolos</div>
+      <h2 class="sec-title rv d1">As <span class="hl-y">Lendas</span> Eternas</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-sm-6 col-lg-4 rv d1">
+        <div class="legend-card" data-bs-toggle="modal" data-bs-target="#modalPele" style="cursor:pointer">
+          <div class="legend-img">
+            <img src="img/pele.jpg" alt="Pelé" width="300" height="290" loading="lazy"/>
+            <div class="legend-num">10</div>
+          </div>
+          <div class="legend-body">
+            <div class="legend-pos">Atacante · 1958–1970 <span class="badge ms-1" style="background:var(--amarelo);color:var(--azul);font-size:.58rem">Ver mais</span></div>
+            <div class="legend-name">PELÉ</div>
+            <p class="legend-desc">O Rei. Único tricampeão mundial e símbolo eterno da Canarinha.</p>
+            <div class="legend-stats">
+              <div class="ls-item"><div class="ls-n">3</div><div class="ls-l">Copas</div></div>
+              <div class="ls-item"><div class="ls-n">77</div><div class="ls-l">Gols</div></div>
+              <div class="ls-item"><div class="ls-n">92</div><div class="ls-l">Jogos</div></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="collapse navbar-collapse ms-lg-4" id="navContent">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link nl" href="#historia">História</a></li>
-          <li class="nav-item"><a class="nav-link nl" href="#titulos">Títulos</a></li>
-          <li class="nav-item"><a class="nav-link nl" href="#lendas">Lendas</a></li>
-          <li class="nav-item"><a class="nav-link nl" href="#galeria">Galeria</a></li>
-          <li class="nav-item"><a class="nav-link nl" href="#timeline">Cronologia</a></li>
-          <li class="nav-item"><a class="nav-link nl" href="#faq">FAQ</a></li>
+      <div class="col-sm-6 col-lg-4 rv d2">
+        <div class="legend-card">
+          <div class="legend-img">
+            <img src="img/garrincha.jpg" alt="Garrincha" width="300" height="290" loading="lazy"/>
+            <div class="legend-num">7</div>
+          </div>
+          <div class="legend-body">
+            <div class="legend-pos">Ponta-Direita · 1958–1966</div>
+            <div class="legend-name">GARRINCHA</div>
+            <p class="legend-desc">Anjo das Pernas Tortas. Em 40 jogos ao lado de Pelé, jamais perdeu.</p>
+            <div class="legend-stats">
+              <div class="ls-item"><div class="ls-n">2</div><div class="ls-l">Copas</div></div>
+              <div class="ls-item"><div class="ls-n">12</div><div class="ls-l">Gols</div></div>
+              <div class="ls-item"><div class="ls-n">50</div><div class="ls-l">Jogos</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 rv d3">
+        <div class="legend-card">
+          <div class="legend-img">
+            <img src="img/ronaldo.jpg" alt="Ronaldo Fenômeno" width="300" height="290" loading="lazy"/>
+            <div class="legend-num">9</div>
+          </div>
+          <div class="legend-body">
+            <div class="legend-pos">Atacante · 1994–2006</div>
+            <div class="legend-name">RONALDO</div>
+            <p class="legend-desc">O Fenômeno. 15 gols em Copas, 2 títulos. Herói do Pentacampeonato.</p>
+            <div class="legend-stats">
+              <div class="ls-item"><div class="ls-n">2</div><div class="ls-l">Copas</div></div>
+              <div class="ls-item"><div class="ls-n">15</div><div class="ls-l">Gols Copa</div></div>
+              <div class="ls-item"><div class="ls-n">98</div><div class="ls-l">Jogos</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 rv d4">
+        <div class="legend-card">
+          <div class="legend-img">
+            <img src="img/ronaldinho.jpg" alt="Ronaldinho Gaúcho" width="300" height="290" loading="lazy"/>
+            <div class="legend-num">11</div>
+          </div>
+          <div class="legend-body">
+            <div class="legend-pos">Meia · 2002–2006</div>
+            <div class="legend-name">RONALDINHO</div>
+            <p class="legend-desc">O Bruxo. Melhor do mundo em 2004–05. Dribles impossíveis e sorriso eterno.</p>
+            <div class="legend-stats">
+              <div class="ls-item"><div class="ls-n">1</div><div class="ls-l">Copa</div></div>
+              <div class="ls-item"><div class="ls-n">33</div><div class="ls-l">Gols</div></div>
+              <div class="ls-item"><div class="ls-n">97</div><div class="ls-l">Jogos</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 rv d5">
+        <div class="legend-card">
+          <div class="legend-img">
+            <img src="img/neymar.jpg" alt="Neymar Jr." width="300" height="290" loading="lazy"/>
+            <div class="legend-num">10</div>
+          </div>
+          <div class="legend-body">
+            <div class="legend-pos">Meia-Atacante · 2014–atual</div>
+            <div class="legend-name">NEYMAR JR.</div>
+            <p class="legend-desc">O maior artilheiro da história da Seleção. Herdeiro da camisa 10 e líder da geração atual.</p>
+            <div class="legend-stats">
+              <div class="ls-item"><div class="ls-n">0</div><div class="ls-l">Copa</div></div>
+              <div class="ls-item"><div class="ls-n">79+</div><div class="ls-l">Gols</div></div>
+              <div class="ls-item"><div class="ls-n">128</div><div class="ls-l">Jogos</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERIA ── -->
+<section id="galeria" class="s-mid">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Fotos</div>
+      <h2 class="sec-title rv d1">Essência <span class="hl-y">Brasileira</span></h2>
+    </div>
+    <div class="gallery-grid rv">
+      <div class="gi span-col-2 span-row-2" data-img="img/gallery/g1.jpg" data-cap="Time Pentacampeão — Coreia/Japão 2002">
+        <img src="img/gallery/g1.jpg" alt="Brasil 2002" width="640" height="520" loading="lazy"/>
+        <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="gi-caption">Time Pentacampeão · 2002</div>
+      </div>
+      <div class="gi span-col-2" data-img="img/gallery/g2.jpg" data-cap="Pelé — O Rei do Futebol · Copa 1970">
+        <img src="img/gallery/g2.jpg" alt="Pelé 1970" width="640" height="260" loading="lazy"/>
+        <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="gi-caption">Pelé — O Rei · 1970</div>
+      </div>
+      <div class="gi" data-img="img/gallery/g3.jpg" data-cap="Paixão Nacional · Futebol Arte">
+        <img src="img/gallery/g3.jpg" alt="Futebol Arte" width="320" height="260" loading="lazy"/>
+        <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="gi-caption">Paixão Nacional</div>
+      </div>
+      <div class="gi" data-img="img/gallery/g4.jpg" data-cap="A alma do futebol brasileiro">
+        <img src="img/gallery/g4.jpg" alt="Futebol" width="320" height="260" loading="lazy"/>
+        <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="gi-caption">Futebol Arte</div>
+      </div>
+      <div class="gi span-col-2" data-img="img/gallery/g5.jpg" data-cap="Seleção Brasileira · Copa 2014 no Brasil">
+        <img src="img/gallery/g5.jpg" alt="Brasil 2014" width="640" height="260" loading="lazy"/>
+        <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="gi-caption">Copa 2014 · Brasil</div>
+      </div>
+      <div class="gi" data-img="img/gallery/g6.jpg" data-cap="Em busca do Hexacampeonato">
+        <img src="img/gallery/g6.jpg" alt="Hexa" width="320" height="260" loading="lazy"/>
+        <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="gi-caption">Em busca do Hexa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ── -->
+<section id="timeline" class="s-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Cronologia</div>
+      <h2 class="sec-title rv d1">Linha do <span class="hl-y">Tempo</span></h2>
+    </div>
+    <div class="timeline rv">
+
+      <div class="tl-item tl-left">
+        <div class="tl-content"><div class="tl-year">1914</div><div class="tl-title">Primeiro Jogo Oficial</div><div class="tl-card"><p class="tl-text">A Seleção disputa seu primeiro jogo oficial contra o Exeter City da Inglaterra. Nasce a Canarinha.</p></div></div>
+        <div class="tl-dot"><div class="tl-dot-inner"><i class="bi bi-flag-fill"></i></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="tl-item tl-right">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner tl-dot-red"><i class="bi bi-heartbreak-fill"></i></div></div>
+        <div class="tl-content"><div class="tl-year">1950</div><div class="tl-title">O Maracanazo</div><div class="tl-card"><p class="tl-text">~200 mil no Maracanã. O Brasil perde para o Uruguai na última rodada. O trauma que forjou campeões.</p></div></div>
+      </div>
+
+      <div class="tl-item tl-left">
+        <div class="tl-content"><div class="tl-year">1954</div><div class="tl-title">A Camisa Amarela</div><div class="tl-card"><p class="tl-text">Concurso nacional elege o novo uniforme verde e amarelo de Aldyr Garcia Schlee, em resposta ao Maracanazo.</p></div></div>
+        <div class="tl-dot"><div class="tl-dot-inner tl-dot-yellow"><i class="bi bi-shirt"></i></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="tl-item tl-right">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner"><i class="bi bi-trophy-fill"></i></div></div>
+        <div class="tl-content"><div class="tl-year">1958</div><div class="tl-title">Primeiro Título Mundial</div><div class="tl-card"><p class="tl-text">Pelé, 17 anos, e Garrincha conquistam o ouro na Suécia. Final: Brasil 5×2 Suécia.</p></div></div>
+      </div>
+
+      <div class="tl-item tl-left">
+        <div class="tl-content"><div class="tl-year">1970</div><div class="tl-title">A Melhor Seleção de Todos os Tempos</div><div class="tl-card"><p class="tl-text">6 jogos, 6 vitórias, 19 gols. A Taça Jules Rimet vai para sempre ao Brasil após o tricampeonato.</p></div></div>
+        <div class="tl-dot"><div class="tl-dot-inner tl-dot-gold"><i class="bi bi-star-fill"></i></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="tl-item tl-right">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner"><i class="bi bi-trophy-fill"></i></div></div>
+        <div class="tl-content"><div class="tl-year">1994</div><div class="tl-title">Tetracampeonato</div><div class="tl-card"><p class="tl-text">24 anos de espera. Romário e Bebeto dominam os EUA. Tetra nos pênaltis contra a Itália.</p></div></div>
+      </div>
+
+      <div class="tl-item tl-left">
+        <div class="tl-content"><div class="tl-year">2002</div><div class="tl-title">PENTACAMPEONATO!</div><div class="tl-card"><p class="tl-text">Ronaldo, Rivaldo, Ronaldinho: 7 jogos, 7 vitórias. Brasil — único pentacampeão da história.</p></div></div>
+        <div class="tl-dot"><div class="tl-dot-inner tl-dot-penta"><i class="bi bi-award-fill"></i></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="tl-item tl-right">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner tl-dot-yellow"><i class="bi bi-star-fill"></i></div></div>
+        <div class="tl-content"><div class="tl-year">2023</div><div class="tl-title">Neymar Bate Recorde de Pelé</div><div class="tl-card"><p class="tl-text">Neymar Jr. marca seu 78º gol pela Seleção e ultrapassa Pelé, tornando-se o maior artilheiro da história da Canarinha.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FRASES ── -->
+<section id="frases" class="s-blue">
+  <div class="container position-relative" style="z-index:1">
+    <div class="text-center mb-4 rv">
+      <div class="eyebrow" style="color:rgba(255,223,0,.7)">Inspiração</div>
+      <h2 class="sec-title" style="color:#fff">Palavras que <span class="hl-y">Eternizaram</span></h2>
+    </div>
+    <div id="frasesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"><div class="frase-slide"><blockquote>"Nasci para jogar futebol, assim como <span class="hl-y">Beethoven</span> nasceu para escrever música."</blockquote><cite>— Pelé</cite></div></div>
+        <div class="carousel-item"><div class="frase-slide"><blockquote>"Nunca vi um jogador tão bom quanto <span class="hl-y">o Pelé</span> e acredito que nunca verei."</blockquote><cite>— Johan Cruyff</cite></div></div>
+        <div class="carousel-item"><div class="frase-slide"><blockquote>"O Brasil tem um modo único de jogar que é <span class="hl-y">puro prazer</span> de assistir."</blockquote><cite>— Franz Beckenbauer</cite></div></div>
+        <div class="carousel-item"><div class="frase-slide"><blockquote>"Sou brasileiro e <span class="hl-y">não desisto nunca.</span>"</blockquote><cite>— Expressão popular brasileira</cite></div></div>
+        <div class="carousel-item"><div class="frase-slide"><blockquote>"O Garrincha era o jogador mais <span class="hl-y">genial</span> que já vi em toda minha vida."</blockquote><cite>— Pelé sobre Garrincha</cite></div></div>
+        <div class="carousel-item"><div class="frase-slide"><blockquote>"Eu quero ser o <span class="hl-y">melhor do mundo</span> e fazer história pela Seleção Brasileira."</blockquote><cite>— Neymar Jr.</cite></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CURIOSIDADES ── -->
+<section id="curiosidades" class="s-mid">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Você Sabia?</div>
+      <h2 class="sec-title rv d1"><span class="hl-y">Curiosidades</span> da Canarinha</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 rv d1"><div class="curio-card"><div class="curio-num">01</div><div class="curio-icon"><i class="bi bi-globe-americas"></i></div><div class="curio-title">Única em Todas as Copas</div><p class="curio-desc">O Brasil é a única seleção a ter participado de todas as 22 edições da Copa do Mundo FIFA, sem nenhuma ausência desde 1930.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv d2"><div class="curio-card"><div class="curio-num">02</div><div class="curio-icon"><i class="bi bi-shirt"></i></div><div class="curio-title">A Camisa Amarela</div><p class="curio-desc">Antes de 1954 o Brasil jogava de branco. A camisa amarela nasceu de um concurso nacional após o Maracanazo, criada por Aldyr Garcia Schlee.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv d3"><div class="curio-card"><div class="curio-num">03</div><div class="curio-icon"><i class="bi bi-people-fill"></i></div><div class="curio-title">Pelé &amp; Garrincha Invictos</div><p class="curio-desc">Em 40 jogos juntos pela Seleção, Pelé e Garrincha nunca perderam: 36 vitórias e 4 empates. A parceria mais lendária do futebol.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv d1"><div class="curio-card"><div class="curio-num">04</div><div class="curio-icon"><i class="bi bi-trophy-fill"></i></div><div class="curio-title">Taça Jules Rimet Eterna</div><p class="curio-desc">Por vencer 3 Copas (1958, 1962, 1970), o Brasil ficou com a Taça Jules Rimet em definitivo. A original foi roubada em 1983 e nunca recuperada.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv d2"><div class="curio-card"><div class="curio-num">05</div><div class="curio-icon"><i class="bi bi-map-fill"></i></div><div class="curio-title">4 Continentes Campeão</div><p class="curio-desc">O Brasil venceu a Copa em 4 continentes: Europa (1958), América do Sul (1962), América do Norte (1970 e 1994) e Ásia (2002).</p></div></div>
+      <div class="col-md-6 col-lg-4 rv d3"><div class="curio-card"><div class="curio-num">06</div><div class="curio-icon"><i class="bi bi-lightning-charge-fill"></i></div><div class="curio-title">A Ressurreição de Ronaldo</div><p class="curio-desc">Após a convulsão misteriosa na véspera da final de 1998, Ronaldo ressurgiu em 2002 marcando 8 gols e sendo o herói do Penta.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" class="s-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow rv">Perguntas</div>
+      <h2 class="sec-title rv d1"><span class="hl-y">FAQ</span> da Seleção</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 rv">
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"><i class="bi bi-trophy-fill me-2" style="color:var(--amarelo)"></i>Quantas Copas o Brasil ganhou?</button></h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">O Brasil conquistou <strong style="color:var(--amarelo)">5 Copas do Mundo</strong>: 1958 (Suécia), 1962 (Chile), 1970 (México), 1994 (EUA) e 2002 (Coreia/Japão). É a única seleção pentacampeã da história.</div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"><i class="bi bi-shirt me-2" style="color:var(--amarelo)"></i>Por que a camisa do Brasil é amarela?</button></h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Adotada em <strong style="color:var(--amarelo)">1954</strong> após o Maracanazo. A CBF realizou um concurso nacional vencido por Aldyr Garcia Schlee. Antes, o Brasil jogava de branco.</div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"><i class="bi bi-star-fill me-2" style="color:var(--amarelo)"></i>Quem é o maior artilheiro da Seleção?</button></h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body"><strong style="color:var(--amarelo)">Neymar Jr.</strong> é o maior artilheiro da história da Seleção, tendo superado Pelé (77 gols) em setembro de 2023. Nas Copas, <strong style="color:var(--amarelo)">Ronaldo Fenômeno</strong> lidera com 15 gols.</div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"><i class="bi bi-globe me-2" style="color:var(--amarelo)"></i>O Brasil participou de todas as Copas?</button></h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Sim! O Brasil é a <strong style="color:var(--amarelo)">única seleção</strong> a ter participado de todas as 22 edições da Copa do Mundo FIFA.</div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"><i class="bi bi-people-fill me-2" style="color:var(--amarelo)"></i>Qual foi a melhor seleção da história?</button></h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">A seleção de <strong style="color:var(--amarelo)">1970</strong> é amplamente considerada a melhor de todos os tempos. Com Pelé, Rivelino, Tostão e Jairzinho, venceu 6 jogos e marcou 19 gols.</div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6"><i class="bi bi-heartbreak-fill me-2" style="color:var(--amarelo)"></i>O que foi o Maracanazo?</button></h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">A derrota do Brasil para o Uruguai na Copa de 1950 no Maracanã. Com ~200 mil torcedores, o Brasil precisava de um empate mas perdeu por 2×1 — o maior trauma do esporte brasileiro.</div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <div class="footer-logo mb-2">SELEÇÃO <span>BRASILEIRA</span></div>
+        <p class="footer-desc">Pentacampeã mundial e única seleção presente em todas as 22 edições da Copa do Mundo FIFA.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://www.instagram.com/brasil/?hl=pt"                   target="_blank" rel="noopener noreferrer" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/CBF_Futebol"                                 target="_blank" rel="noopener noreferrer" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.youtube.com/channel/UCdQuDaRww5NkKpQQ1BJBWww" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.facebook.com/CBF/?locale=pt_BR"                target="_blank" rel="noopener noreferrer" class="social-btn"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.tiktok.com/@brasil"                            target="_blank" rel="noopener noreferrer" class="social-btn"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Navegar</div>
+        <ul class="footer-links">
+          <li><a href="#historia">História</a></li>
+          <li><a href="#titulos">Títulos</a></li>
+          <li><a href="#lendas">Lendas</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#timeline">Cronologia</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
-
-    </div>
-  </nav>
-
-  <!-- ── HERO ───────────────────────────────────────────────── -->
-  <section id="hero">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-blob d-none d-xl-flex">
-      <i class="bi bi-trophy-fill"></i>
-      <span>5× Campeão<br>Mundial</span>
-    </div>
-
-    <div class="container hero-inner">
-      <div class="row" style="min-height: 100vh; align-items: center;">
-        <div class="col-lg-8 col-xl-7">
-
-          <div class="hero-tag rv">
-            <i class="bi bi-flag-fill"></i> A Canarinha do Mundo
-          </div>
-
-          <h1 class="hero-title rv d1">
-            <span class="hl-y">A MAIOR</span><br>
-            SELEÇÃO<br>
-            <span class="hero-ghost">DO MUNDO</span>
-          </h1>
-
-          <p class="hero-sub rv d2">
-            5 títulos mundiais. 22 Copas disputadas. A única nação presente em
-            todas as edições da Copa do Mundo FIFA — e a única pentacampeã da história.
-          </p>
-
-          <div class="d-flex flex-wrap gap-3 mt-4 mb-5 rv d3">
-            <a href="#historia" class="cbtn cbtn-primary">
-              <i class="bi bi-play-fill"></i> Explorar
-            </a>
-            <a href="#titulos" class="cbtn cbtn-outline">
-              <i class="bi bi-trophy"></i> Os 5 Títulos
-            </a>
-          </div>
-
-          <div class="d-flex flex-wrap gap-4 rv d4">
-            <div class="hero-stat">
-              <div class="hero-stat-n counter" data-target="5">0</div>
-              <div class="hero-stat-l">Copas Ganhas</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-n counter" data-target="22">0</div>
-              <div class="hero-stat-l">Participações</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-n">237</div>
-              <div class="hero-stat-l">Gols em Copas</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-n counter" data-target="76">0</div>
-              <div class="hero-stat-l">Vitórias</div>
-            </div>
-          </div>
-
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Títulos</div>
+        <ul class="footer-links">
+          <li><a href="#titulos">1958 — Suécia</a></li>
+          <li><a href="#titulos">1962 — Chile</a></li>
+          <li><a href="#titulos">1970 — México</a></li>
+          <li><a href="#titulos">1994 — EUA</a></li>
+          <li><a href="#titulos">2002 — Ásia</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Números</div>
+        <div class="row g-2">
+          <div class="col-6"><div class="footer-stat-box"><div class="fsb-n" style="color:var(--amarelo)">5</div><div class="fsb-l">Copas Ganhas</div></div></div>
+          <div class="col-6"><div class="footer-stat-box"><div class="fsb-n" style="color:var(--verde)">22</div><div class="fsb-l">Participações</div></div></div>
+          <div class="col-6"><div class="footer-stat-box"><div class="fsb-n" style="color:var(--amarelo)">237</div><div class="fsb-l">Gols em Copas</div></div></div>
+          <div class="col-6"><div class="footer-stat-box"><div class="fsb-n" style="color:var(--verde)">76</div><div class="fsb-l">Vitórias</div></div></div>
         </div>
       </div>
     </div>
-
-    <div class="scroll-cue">
-      <span>Scroll</span>
-      <i class="bi bi-chevron-down"></i>
-    </div>
-  </section>
-
-  <!-- ── MARQUEE ─────────────────────────────────────────────── -->
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="marqueeTrack">
-      <span>5 COPAS DO MUNDO</span><span class="dot">★</span>
-      <span>1958 · 1962 · 1970 · 1994 · 2002</span><span class="dot">★</span>
-      <span>ÚNICA EM TODAS AS EDIÇÕES</span><span class="dot">★</span>
-      <span>PELÉ · GARRINCHA · RONALDO · RONALDINHO · NEYMAR · ZICO</span><span class="dot">★</span>
-      <span>114 JOGOS · 76 VITÓRIAS · 237 GOLS</span><span class="dot">★</span>
+    <div class="footer-bottom">
+      <p>© 2026 · Seleção Brasileira — A Canarinha do Mundo · Feito com <i class="bi bi-heart-fill text-danger"></i> no Brasil</p>
+      <div class="flag-strip" style="width:60px;border-radius:3px"></div>
     </div>
   </div>
+</footer>
 
-  <!-- ── STATS ───────────────────────────────────────────────── -->
-  <section id="stats" class="s-mid">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Números</div>
-        <h2 class="sec-title rv d1">Recordes da <span class="hl-y">Canarinha</span></h2>
-      </div>
-      <div class="row g-3 g-md-4">
+<div class="flag-strip"></div>
+<button id="btt" title="Voltar ao topo"><i class="bi bi-chevron-up"></i></button>
 
-        <div class="col-6 col-md-4 col-lg-3 rv d1">
-          <div class="stat-card">
-            <div class="stat-icon ico-yellow"><i class="bi bi-trophy-fill"></i></div>
-            <div class="stat-number counter" data-target="5">0</div>
-            <div class="stat-label">Copas do Mundo</div>
-            <p class="stat-desc">Único pentacampeão da história</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d2">
-          <div class="stat-card">
-            <div class="stat-icon ico-green"><i class="bi bi-lightning-fill"></i></div>
-            <div class="stat-number counter" data-target="76">0</div>
-            <div class="stat-label">Vitórias em Copas</div>
-            <p class="stat-desc">Maior número na história do torneio</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d3">
-          <div class="stat-card">
-            <div class="stat-icon ico-blue"><i class="bi bi-bullseye"></i></div>
-            <div class="stat-number counter" data-target="237">0</div>
-            <div class="stat-label">Gols Marcados</div>
-            <p class="stat-desc">Maior artilharia de todos os tempos</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d4">
-          <div class="stat-card">
-            <div class="stat-icon ico-gold"><i class="bi bi-calendar-check"></i></div>
-            <div class="stat-number counter" data-target="22">0</div>
-            <div class="stat-label">Participações</div>
-            <p class="stat-desc">Única seleção em todas as edições</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d1">
-          <div class="stat-card">
-            <div class="stat-icon ico-green"><i class="bi bi-shield-check"></i></div>
-            <div class="stat-number counter" data-target="114">0</div>
-            <div class="stat-label">Jogos Disputados</div>
-            <p class="stat-desc">72% de aproveitamento geral</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d2">
-          <div class="stat-card">
-            <div class="stat-icon ico-yellow"><i class="bi bi-graph-up-arrow"></i></div>
-            <div class="stat-number counter" data-target="129">0</div>
-            <div class="stat-label">Saldo de Gols</div>
-            <p class="stat-desc">237 marcados · 108 sofridos</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d3">
-          <div class="stat-card">
-            <div class="stat-icon ico-blue"><i class="bi bi-globe-americas"></i></div>
-            <div class="stat-number counter" data-target="4">0</div>
-            <div class="stat-label">Continentes Campeão</div>
-            <p class="stat-desc">Europa, Américas e Ásia</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 rv d4">
-          <div class="stat-card">
-            <div class="stat-icon ico-gold"><i class="bi bi-clock-history"></i></div>
-            <div class="stat-number">1914</div>
-            <div class="stat-label">Fundação</div>
-            <p class="stat-desc">Mais de um século de futebol arte</p>
-          </div>
-        </div>
-
+<!-- ── MODAL LIGHTBOX ── -->
+<div class="modal fade" id="lightboxModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content lightbox-content">
+      <div class="modal-body p-0 position-relative">
+        <button class="lb-arrow lb-prev" id="lbPrev"><i class="bi bi-chevron-left"></i></button>
+        <button class="lb-arrow lb-next" id="lbNext"><i class="bi bi-chevron-right"></i></button>
+        <span class="lb-counter" id="lbCounter">1 / 6</span>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" style="filter:invert(1)"></button>
+        <img src="" alt="" id="lbImg" class="lb-img" width="900" height="600"/>
+        <div class="lb-caption" id="lbCaption"></div>
       </div>
     </div>
-  </section>
-
-  <!-- ── HISTÓRIA ────────────────────────────────────────────── -->
-  <section id="historia" class="s-dark">
-    <div class="container">
-
-      <div class="row align-items-center g-5 mb-5">
-        <div class="col-lg-6 rv-l">
-          <div class="img-wrap">
-            <img src="img/historia-1.jpg"
-                 alt="Seleção Brasileira Copa 2014"
-                 width="640" height="420" loading="lazy"/>
-            <div class="img-badge">
-              <div class="img-badge-year">1914</div>
-              <div class="img-badge-label">Primeiro jogo oficial</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 rv-r">
-          <div class="eyebrow">A Origem</div>
-          <h2 class="sec-title">Uma <span class="hl-y">Lenda</span> Que Nasceu</h2>
-          <p class="sec-desc mt-3">
-            A Seleção disputou seu primeiro jogo em 1914 contra o Exeter City. De um
-            começo humilde emergiu a maior potência do futebol mundial — forjada no
-            trauma do Maracanazo de 1950 e renascida em 1958 com o primeiro título.
-          </p>
-          <div class="d-flex flex-wrap gap-2 mt-4">
-            <span class="chip chip-green"><i class="bi bi-calendar"></i> 1914 — Origem</span>
-            <span class="chip chip-yellow"><i class="bi bi-shirt"></i> 1954 — Camisa amarela</span>
-            <span class="chip chip-blue"><i class="bi bi-globe"></i> 22 Copas participadas</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="row align-items-center g-5 flex-lg-row-reverse">
-        <div class="col-lg-6 rv-r">
-          <div class="img-wrap">
-            <img src="img/historia-2.jpg"
-                 alt="Seleção Brasileira Pentacampeonato 2002"
-                 width="640" height="420" loading="lazy"/>
-            <div class="img-badge">
-              <div class="img-badge-year">2002</div>
-              <div class="img-badge-label">PENTA!</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 rv-l">
-          <div class="eyebrow">O Auge</div>
-          <h2 class="sec-title">Do Trauma ao <span class="hl-y">Penta</span></h2>
-          <p class="sec-desc mt-3">
-            Em 2002 com Ronaldo, Rivaldo e Ronaldinho, o Brasil atingiu a perfeição:
-            7 jogos, 7 vitórias — tornando-se o único pentacampeão e o único a vencer
-            a Copa em quatro continentes diferentes.
-          </p>
-          <div class="quote-block mt-4">
-            <i class="bi bi-quote quote-icon"></i>
-            <p class="quote-text">
-              "O Brasil é a única nação a ter vencido a Copa do Mundo em quatro
-              continentes diferentes."
-              <strong class="quote-author">— FIFA</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── TÍTULOS ──────────────────────────────────────────────── -->
-  <section id="titulos" class="s-mid">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Conquistas</div>
-        <h2 class="sec-title rv d1">As <span class="hl-y">Cinco Estrelas</span></h2>
-      </div>
-      <!-- Substitui o <div class="row g-4"> inteiro da seção #titulos -->
-
-<div id="copasCarousel" class="carousel slide" data-bs-ride="false">
-
-  <!-- Indicadores de ponto -->
-  <div class="carousel-indicators copas-indicators">
-    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="0" class="active" aria-label="1958"></button>
-    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="1" aria-label="1962"></button>
-    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="2" aria-label="1970"></button>
-    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="3" aria-label="1994"></button>
-    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="4" aria-label="2002"></button>
   </div>
-
-  <!-- Slides -->
-  <div class="carousel-inner copas-inner">
-
-    <div class="carousel-item active">
-      <div class="copa-card copa-card-solo">
-        <img src="img/copa-1958.jpg" alt="Copa 1958 Suécia" width="800" height="420" loading="lazy"/>
-        <div class="copa-overlay"></div>
-        <div class="copa-body">
-          <div class="copa-year">1958</div>
-          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Suécia</div>
-          <p class="copa-desc">Pelé, 17 anos, marca 2 na final. Brasil 5×2 Suécia.</p>
-          <div class="d-flex gap-2 flex-wrap mt-3">
-            <span class="chip chip-green">Pelé — 17 anos</span>
-            <span class="chip chip-yellow">Garrincha</span>
-          </div>
-        </div>
-        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-        <div class="copa-tag">★ I</div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="copa-card copa-card-solo">
-        <img src="img/copa-1962.jpg" alt="Copa 1962 Chile" width="800" height="420" loading="lazy"/>
-        <div class="copa-overlay"></div>
-        <div class="copa-body">
-          <div class="copa-year">1962</div>
-          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Chile</div>
-          <p class="copa-desc">Garrincha carrega o Brasil. Pelé se machuca na 2ª rodada.</p>
-          <div class="d-flex gap-2 flex-wrap mt-3">
-            <span class="chip chip-green">Garrincha MVP</span>
-            <span class="chip chip-yellow">Vavá</span>
-          </div>
-        </div>
-        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-        <div class="copa-tag">★ II</div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="copa-card copa-card-solo">
-        <img src="img/copa-1970.jpg" alt="Copa 1970 México" width="800" height="420" loading="lazy"/>
-        <div class="copa-overlay"></div>
-        <div class="copa-body">
-          <div class="copa-year">1970</div>
-          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>México</div>
-          <p class="copa-desc">A melhor seleção da história. 6 jogos, 6 vitórias, 19 gols.</p>
-          <div class="d-flex gap-2 flex-wrap mt-3">
-            <span class="chip chip-green">Pelé tricampeão</span>
-            <span class="chip chip-yellow">Rivelino</span>
-          </div>
-        </div>
-        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-        <div class="copa-tag">★ III</div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="copa-card copa-card-solo">
-        <img src="img/copa-1994.jpg" alt="Copa 1994 EUA" width="800" height="420" loading="lazy"/>
-        <div class="copa-overlay"></div>
-        <div class="copa-body">
-          <div class="copa-year">1994</div>
-          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Estados Unidos</div>
-          <p class="copa-desc">24 anos de espera. Romário e Bebeto. Tetra nos pênaltis contra a Itália.</p>
-          <div class="d-flex gap-2 flex-wrap mt-3">
-            <span class="chip chip-green">Romário MVP</span>
-            <span class="chip chip-yellow">Bebeto</span>
-          </div>
-        </div>
-        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-        <div class="copa-tag">★ IV</div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="copa-card copa-card-solo">
-        <img src="img/copa-2002.jpg" alt="Brasil 2002 Penta" width="800" height="420" loading="lazy"/>
-        <div class="copa-overlay"></div>
-        <div class="copa-body">
-          <div class="copa-year">2002</div>
-          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Coreia do Sul · Japão</div>
-          <p class="copa-desc">O PENTA! Ronaldo marca 2 na final. 7 jogos, 7 vitórias.</p>
-          <div class="d-flex gap-2 flex-wrap mt-3">
-            <span class="chip chip-green">Ronaldo 8 gols</span>
-            <span class="chip chip-yellow">Rivaldo</span>
-            <span class="chip chip-blue">Ronaldinho</span>
-          </div>
-        </div>
-        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-        <div class="copa-tag">★ V</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Setas de navegação -->
-  <button class="carousel-control-prev copas-prev" type="button"
-          data-bs-target="#copasCarousel" data-bs-slide="prev">
-    <i class="bi bi-chevron-left"></i>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next copas-next" type="button"
-          data-bs-target="#copasCarousel" data-bs-slide="next">
-    <i class="bi bi-chevron-right"></i>
-    <span class="visually-hidden">Próximo</span>
-  </button>
-
 </div>
-  </section>
 
-  <!-- ── LENDAS ───────────────────────────────────────────────── -->
-  <!-- ⚠️ EDITADO: Neymar adicionado + col-lg-4 em todos para 3+2 -->
-  <section id="lendas" class="s-dark">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Ídolos</div>
-        <h2 class="sec-title rv d1">As <span class="hl-y">Lendas</span> Eternas</h2>
+<!-- ── MODAL PELÉ ── -->
+<div class="modal fade" id="modalPele" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content pele-modal-content">
+      <div class="modal-header pele-modal-header">
+        <h5 class="modal-title pele-modal-title"><i class="bi bi-star-fill me-2" style="color:var(--amarelo)"></i>PELÉ — O Rei do Futebol</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" style="filter:invert(1)"></button>
       </div>
-      <div class="row g-4 justify-content-center">
-
-        <!-- Pelé -->
-        <div class="col-sm-6 col-lg-4 rv d1">
-          <div class="legend-card" data-bs-toggle="modal" data-bs-target="#modalPele" style="cursor: pointer;">
-            <div class="legend-img">
-              <img src="img/pele.jpg" alt="Pelé" width="300" height="290" loading="lazy"/>
-              <div class="legend-num">10</div>
-            </div>
-            <div class="legend-body">
-              <div class="legend-pos">
-                Atacante · 1958–1970
-                <span class="badge ms-1" style="background: var(--amarelo); color: var(--azul); font-size: .58rem;">Ver mais</span>
-              </div>
-              <div class="legend-name">PELÉ</div>
-              <p class="legend-desc">O Rei. Único tricampeão mundial e símbolo eterno da Canarinha.</p>
-              <div class="legend-stats">
-                <div class="ls-item"><div class="ls-n">3</div><div class="ls-l">Copas</div></div>
-                <div class="ls-item"><div class="ls-n">77</div><div class="ls-l">Gols</div></div>
-                <div class="ls-item"><div class="ls-n">92</div><div class="ls-l">Jogos</div></div>
-              </div>
+      <div class="modal-body p-0">
+        <div class="row g-0">
+          <div class="col-md-5 position-relative">
+            <img src="img/pele.jpg" alt="Pelé" width="400" height="480" class="pele-modal-img" loading="lazy"/>
+            <div class="pele-modal-img-overlay"></div>
+            <div class="pele-modal-img-name">
+              <div class="pele-modal-name-title">PELÉ</div>
+              <div class="pele-modal-name-sub">O Rei do Futebol</div>
             </div>
           </div>
-        </div>
-
-        <!-- Garrincha -->
-        <div class="col-sm-6 col-lg-4 rv d2">
-          <div class="legend-card">
-            <div class="legend-img">
-              <img src="img/garrincha.jpg" alt="Garrincha" width="300" height="290" loading="lazy"/>
-              <div class="legend-num">7</div>
+          <div class="col-md-7 p-4">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="chip chip-green">Tricampeão Mundial</span>
+              <span class="chip chip-yellow">1958 · 1962 · 1970</span>
             </div>
-            <div class="legend-body">
-              <div class="legend-pos">Ponta-Direita · 1958–1966</div>
-              <div class="legend-name">GARRINCHA</div>
-              <p class="legend-desc">Anjo das Pernas Tortas. Em 40 jogos ao lado de Pelé, jamais perdeu.</p>
-              <div class="legend-stats">
-                <div class="ls-item"><div class="ls-n">2</div><div class="ls-l">Copas</div></div>
-                <div class="ls-item"><div class="ls-n">12</div><div class="ls-l">Gols</div></div>
-                <div class="ls-item"><div class="ls-n">50</div><div class="ls-l">Jogos</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ronaldo -->
-        <div class="col-sm-6 col-lg-4 rv d3">
-          <div class="legend-card">
-            <div class="legend-img">
-              <img src="img/ronaldo.jpg" alt="Ronaldo Fenômeno" width="300" height="290" loading="lazy"/>
-              <div class="legend-num">9</div>
-            </div>
-            <div class="legend-body">
-              <div class="legend-pos">Atacante · 1994–2006</div>
-              <div class="legend-name">RONALDO</div>
-              <p class="legend-desc">O Fenômeno. 15 gols em Copas, 2 títulos. Herói do Pentacampeonato.</p>
-              <div class="legend-stats">
-                <div class="ls-item"><div class="ls-n">2</div><div class="ls-l">Copas</div></div>
-                <div class="ls-item"><div class="ls-n">15</div><div class="ls-l">Gols Copa</div></div>
-                <div class="ls-item"><div class="ls-n">98</div><div class="ls-l">Jogos</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ronaldinho -->
-        <div class="col-sm-6 col-lg-4 rv d4">
-          <div class="legend-card">
-            <div class="legend-img">
-              <img src="img/ronaldinho.jpg" alt="Ronaldinho Gaúcho" width="300" height="290" loading="lazy"/>
-              <div class="legend-num">11</div>
-            </div>
-            <div class="legend-body">
-              <div class="legend-pos">Meia · 2002–2006</div>
-              <div class="legend-name">RONALDINHO</div>
-              <p class="legend-desc">O Bruxo. Melhor do mundo em 2004–05. Dribles impossíveis e sorriso eterno.</p>
-              <div class="legend-stats">
-                <div class="ls-item"><div class="ls-n">1</div><div class="ls-l">Copa</div></div>
-                <div class="ls-item"><div class="ls-n">33</div><div class="ls-l">Gols</div></div>
-                <div class="ls-item"><div class="ls-n">97</div><div class="ls-l">Jogos</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ⭐ NOVO — Neymar Jr. -->
-        <div class="col-sm-6 col-lg-4 rv d5">
-          <div class="legend-card">
-            <div class="legend-img">
-              <img src="img/neymar.jpg" alt="Neymar Jr." width="300" height="290" loading="lazy"/>
-              <div class="legend-num">10</div>
-            </div>
-            <div class="legend-body">
-              <div class="legend-pos">Meia-Atacante · 2014–atual</div>
-              <div class="legend-name">NEYMAR JR.</div>
-              <p class="legend-desc">O maior artilheiro da história da Seleção. Herdeiro da camisa 10 e líder da geração atual.</p>
-              <div class="legend-stats">
-                <div class="ls-item"><div class="ls-n">0</div><div class="ls-l">Copa</div></div>
-                <div class="ls-item"><div class="ls-n">79+</div><div class="ls-l">Gols</div></div>
-                <div class="ls-item"><div class="ls-n">128</div><div class="ls-l">Jogos</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── GALERIA ──────────────────────────────────────────────── -->
-  <section id="galeria" class="s-mid">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Fotos</div>
-        <h2 class="sec-title rv d1">Essência  <span class="hl-y">Brasileira</span></h2>
-      </div>
-      <div class="gallery-grid rv">
-
-        <div class="gi span-col-2 span-row-2"
-             data-img="img/gallery/g1.jpg"
-             data-cap="Time Pentacampeão — Coreia/Japão 2002">
-          <img src="img/gallery/g1.jpg" alt="Brasil 2002" width="640" height="520" loading="lazy"/>
-          <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
-          <div class="gi-caption">Time Pentacampeão · 2002</div>
-        </div>
-
-        <div class="gi span-col-2"
-             data-img="img/gallery/g2.jpg"
-             data-cap="Pelé — O Rei do Futebol · Copa 1970">
-          <img src="img/gallery/g2.jpg" alt="Pelé 1970" width="640" height="260" loading="lazy"/>
-          <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
-          <div class="gi-caption">Pelé — O Rei · 1970</div>
-        </div>
-
-        <div class="gi"
-             data-img="img/gallery/g3.jpg"
-             data-cap="Paixão Nacional · Futebol Arte">
-          <img src="img/gallery/g3.jpg" alt="Futebol Arte" width="320" height="260" loading="lazy"/>
-          <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
-          <div class="gi-caption">Paixão Nacional</div>
-        </div>
-
-        <div class="gi"
-             data-img="img/gallery/g4.jpg"
-             data-cap="A alma do futebol brasileiro">
-          <img src="img/gallery/g4.jpg" alt="Futebol" width="320" height="260" loading="lazy"/>
-          <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
-          <div class="gi-caption">Futebol Arte</div>
-        </div>
-
-        <div class="gi span-col-2"
-             data-img="img/gallery/g5.jpg"
-             data-cap="Seleção Brasileira · Copa 2014 no Brasil">
-          <img src="img/gallery/g5.jpg" alt="Brasil 2014" width="640" height="260" loading="lazy"/>
-          <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
-          <div class="gi-caption">Copa 2014 · Brasil</div>
-        </div>
-
-        <div class="gi"
-             data-img="img/gallery/g6.jpg"
-             data-cap="Em busca do Hexacampeonato">
-          <img src="img/gallery/g6.jpg" alt="Hexa" width="320" height="260" loading="lazy"/>
-          <div class="gi-overlay"><i class="bi bi-zoom-in"></i></div>
-          <div class="gi-caption">Em busca do Hexa</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── TIMELINE ─────────────────────────────────────────────── -->
-  <section id="timeline" class="s-dark">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Cronologia</div>
-        <h2 class="sec-title rv d1">Linha do <span class="hl-y">Tempo</span></h2>
-      </div>
-      <div class="timeline rv">
-
-        <div class="tl-item tl-left">
-          <div class="tl-content">
-            <div class="tl-year">1914</div>
-            <div class="tl-title">Primeiro Jogo Oficial</div>
-            <div class="tl-card"><p class="tl-text">A Seleção disputa seu primeiro jogo oficial contra o Exeter City da Inglaterra. Nasce a Canarinha.</p></div>
-          </div>
-          <div class="tl-dot"><div class="tl-dot-inner"><i class="bi bi-flag-fill"></i></div></div>
-          <div class="tl-empty"></div>
-        </div>
-
-        <div class="tl-item tl-right">
-          <div class="tl-empty"></div>
-          <div class="tl-dot"><div class="tl-dot-inner tl-dot-red"><i class="bi bi-heartbreak-fill"></i></div></div>
-          <div class="tl-content">
-            <div class="tl-year">1950</div>
-            <div class="tl-title">O Maracanazo</div>
-            <div class="tl-card"><p class="tl-text">~200 mil no Maracanã. O Brasil perde para o Uruguai na última rodada. O trauma que forjou campeões.</p></div>
-          </div>
-        </div>
-
-        <div class="tl-item tl-left">
-          <div class="tl-content">
-            <div class="tl-year">1954</div>
-            <div class="tl-title">A Camisa Amarela</div>
-            <div class="tl-card"><p class="tl-text">Concurso nacional elege o novo uniforme verde e amarelo de Aldyr Garcia Schlee, em resposta ao Maracanazo.</p></div>
-          </div>
-          <div class="tl-dot"><div class="tl-dot-inner tl-dot-yellow"><i class="bi bi-shirt"></i></div></div>
-          <div class="tl-empty"></div>
-        </div>
-
-        <div class="tl-item tl-right">
-          <div class="tl-empty"></div>
-          <div class="tl-dot"><div class="tl-dot-inner"><i class="bi bi-trophy-fill"></i></div></div>
-          <div class="tl-content">
-            <div class="tl-year">1958</div>
-            <div class="tl-title">Primeiro Título Mundial</div>
-            <div class="tl-card"><p class="tl-text">Pelé, 17 anos, e Garrincha conquistam o ouro na Suécia. Final: Brasil 5×2 Suécia.</p></div>
-          </div>
-        </div>
-
-        <div class="tl-item tl-left">
-          <div class="tl-content">
-            <div class="tl-year">1970</div>
-            <div class="tl-title">A Melhor Seleção de Todos os Tempos</div>
-            <div class="tl-card"><p class="tl-text">6 jogos, 6 vitórias, 19 gols. A Taça Jules Rimet vai para sempre ao Brasil após o tricampeonato.</p></div>
-          </div>
-          <div class="tl-dot"><div class="tl-dot-inner tl-dot-gold"><i class="bi bi-star-fill"></i></div></div>
-          <div class="tl-empty"></div>
-        </div>
-
-        <div class="tl-item tl-right">
-          <div class="tl-empty"></div>
-          <div class="tl-dot"><div class="tl-dot-inner"><i class="bi bi-trophy-fill"></i></div></div>
-          <div class="tl-content">
-            <div class="tl-year">1994</div>
-            <div class="tl-title">Tetracampeonato</div>
-            <div class="tl-card"><p class="tl-text">24 anos de espera. Romário e Bebeto dominam os EUA. Tetra nos pênaltis contra a Itália.</p></div>
-          </div>
-        </div>
-
-        <div class="tl-item tl-left">
-          <div class="tl-content">
-            <div class="tl-year">2002</div>
-            <div class="tl-title">PENTACAMPEONATO!</div>
-            <div class="tl-card"><p class="tl-text">Ronaldo, Rivaldo, Ronaldinho: 7 jogos, 7 vitórias. Brasil — único pentacampeão da história.</p></div>
-          </div>
-          <div class="tl-dot"><div class="tl-dot-inner tl-dot-penta"><i class="bi bi-award-fill"></i></div></div>
-          <div class="tl-empty"></div>
-        </div>
-
-        <!-- ⭐ NOVO — Neymar bate recorde -->
-        <div class="tl-item tl-right">
-          <div class="tl-empty"></div>
-          <div class="tl-dot"><div class="tl-dot-inner tl-dot-yellow"><i class="bi bi-star-fill"></i></div></div>
-          <div class="tl-content">
-            <div class="tl-year">2023</div>
-            <div class="tl-title">Neymar Bate Recorde de Pelé</div>
-            <div class="tl-card"><p class="tl-text">Neymar Jr. marca seu 78º gol pela Seleção e ultrapassa Pelé, tornando-se o maior artilheiro da história da Canarinha.</p></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FRASES ────────────────────────────────────────────────── -->
-  <section id="frases" class="s-blue">
-    <div class="container position-relative" style="z-index: 1;">
-      <div class="text-center mb-4 rv">
-        <div class="eyebrow" style="color: rgba(255,223,0,.7)">Inspiração</div>
-        <h2 class="sec-title" style="color: #fff">Palavras que <span class="hl-y">Eternizaram</span></h2>
-      </div>
-      <div id="frasesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="3"></button>
-          <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="4"></button>
-          <button type="button" data-bs-target="#frasesCarousel" data-bs-slide-to="5"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="frase-slide">
-              <blockquote>"Nasci para jogar futebol, assim como <span class="hl-y">Beethoven</span> nasceu para escrever música."</blockquote>
-              <cite>— Pelé</cite>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="frase-slide">
-              <blockquote>"Nunca vi um jogador tão bom quanto <span class="hl-y">o Pelé</span> e acredito que nunca verei."</blockquote>
-              <cite>— Johan Cruyff</cite>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="frase-slide">
-              <blockquote>"O Brasil tem um modo único de jogar que é <span class="hl-y">puro prazer</span> de assistir."</blockquote>
-              <cite>— Franz Beckenbauer</cite>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="frase-slide">
-              <blockquote>"Sou brasileiro e <span class="hl-y">não desisto nunca.</span>"</blockquote>
-              <cite>— Expressão popular brasileira</cite>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="frase-slide">
-              <blockquote>"O Garrincha era o jogador mais <span class="hl-y">genial</span> que já vi em toda minha vida."</blockquote>
-              <cite>— Pelé sobre Garrincha</cite>
-            </div>
-          </div>
-          <!-- ⭐ NOVA frase — Neymar -->
-          <div class="carousel-item">
-            <div class="frase-slide">
-              <blockquote>"Eu quero ser o <span class="hl-y">melhor do mundo</span> e fazer história pela Seleção Brasileira."</blockquote>
-              <cite>— Neymar Jr.</cite>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CURIOSIDADES ──────────────────────────────────────────── -->
-  <section id="curiosidades" class="s-mid">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Você Sabia?</div>
-        <h2 class="sec-title rv d1"><span class="hl-y">Curiosidades</span> da Canarinha</h2>
-      </div>
-      <div class="row g-4">
-
-        <div class="col-md-6 col-lg-4 rv d1">
-          <div class="curio-card">
-            <div class="curio-num">01</div>
-            <div class="curio-icon"><i class="bi bi-globe-americas"></i></div>
-            <div class="curio-title">Única em Todas as Copas</div>
-            <p class="curio-desc">O Brasil é a única seleção a ter participado de todas as 22 edições da Copa do Mundo FIFA, sem nenhuma ausência desde 1930.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 rv d2">
-          <div class="curio-card">
-            <div class="curio-num">02</div>
-            <div class="curio-icon"><i class="bi bi-shirt"></i></div>
-            <div class="curio-title">A Camisa Amarela</div>
-            <p class="curio-desc">Antes de 1954 o Brasil jogava de branco. A camisa amarela nasceu de um concurso nacional após o Maracanazo, criada por Aldyr Garcia Schlee.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 rv d3">
-          <div class="curio-card">
-            <div class="curio-num">03</div>
-            <div class="curio-icon"><i class="bi bi-people-fill"></i></div>
-            <div class="curio-title">Pelé & Garrincha Invictos</div>
-            <p class="curio-desc">Em 40 jogos juntos pela Seleção, Pelé e Garrincha nunca perderam: 36 vitórias e 4 empates. A parceria mais lendária do futebol.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 rv d1">
-          <div class="curio-card">
-            <div class="curio-num">04</div>
-            <div class="curio-icon"><i class="bi bi-trophy-fill"></i></div>
-            <div class="curio-title">Taça Jules Rimet Eterna</div>
-            <p class="curio-desc">Por vencer 3 Copas (1958, 1962, 1970), o Brasil ficou com a Taça Jules Rimet em definitivo. A original foi roubada em 1983 e nunca recuperada.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 rv d2">
-          <div class="curio-card">
-            <div class="curio-num">05</div>
-            <div class="curio-icon"><i class="bi bi-map-fill"></i></div>
-            <div class="curio-title">4 Continentes Campeão</div>
-            <p class="curio-desc">O Brasil venceu a Copa em 4 continentes: Europa (1958), América do Sul (1962), América do Norte (1970 e 1994) e Ásia (2002).</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 rv d3">
-          <div class="curio-card">
-            <div class="curio-num">06</div>
-            <div class="curio-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-            <div class="curio-title">A Ressurreição de Ronaldo</div>
-            <p class="curio-desc">Após a convulsão misteriosa na véspera da final de 1998, Ronaldo ressurgiu em 2002 marcando 8 gols e sendo o herói do Penta.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FAQ ────────────────────────────────────────────────────── -->
-  <section id="faq" class="s-dark">
-    <div class="container">
-      <div class="text-center mb-5">
-        <div class="eyebrow rv">Perguntas</div>
-        <h2 class="sec-title rv d1"><span class="hl-y">FAQ</span> da Seleção</h2>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-8 rv">
-          <div class="accordion" id="faqAccordion">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  <i class="bi bi-trophy-fill me-2" style="color: var(--amarelo)"></i>Quantas Copas o Brasil ganhou?
-                </button>
-              </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">O Brasil conquistou <strong style="color: var(--amarelo)">5 Copas do Mundo</strong>: 1958 (Suécia), 1962 (Chile), 1970 (México), 1994 (EUA) e 2002 (Coreia/Japão). É a única seleção pentacampeã da história.</div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                  <i class="bi bi-shirt me-2" style="color: var(--amarelo)"></i>Por que a camisa do Brasil é amarela?
-                </button>
-              </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Adotada em <strong style="color: var(--amarelo)">1954</strong> após o Maracanazo. A CBF realizou um concurso nacional vencido por Aldyr Garcia Schlee. Antes, o Brasil jogava de branco.</div>
-              </div>
-            </div>
-
-            <!-- ⭐ EDITADO — Neymar mencionado com destaque -->
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                  <i class="bi bi-star-fill me-2" style="color: var(--amarelo)"></i>Quem é o maior artilheiro da Seleção?
-                </button>
-              </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  <strong style="color: var(--amarelo)">Neymar Jr.</strong> é o maior artilheiro da história da Seleção, tendo superado o recorde histórico de Pelé (77 gols) em setembro de 2023 durante partida contra a Bolívia. Nas Copas especificamente, <strong style="color: var(--amarelo)">Ronaldo Fenômeno</strong> lidera com 15 gols em 1998 e 2002.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                  <i class="bi bi-globe me-2" style="color: var(--amarelo)"></i>O Brasil participou de todas as Copas?
-                </button>
-              </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Sim! O Brasil é a <strong style="color: var(--amarelo)">única seleção</strong> a ter participado de todas as 22 edições da Copa do Mundo FIFA. Nenhum outro país chegou perto desse feito.</div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                  <i class="bi bi-people-fill me-2" style="color: var(--amarelo)"></i>Qual foi a melhor seleção da história?
-                </button>
-              </h2>
-              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">A seleção de <strong style="color: var(--amarelo)">1970</strong> é amplamente considerada a melhor de todos os tempos. Com Pelé, Rivelino, Tostão e Jairzinho, venceu 6 jogos e marcou 19 gols com futebol arte total.</div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                  <i class="bi bi-heartbreak-fill me-2" style="color: var(--amarelo)"></i>O que foi o Maracanazo?
-                </button>
-              </h2>
-              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">A derrota do Brasil para o Uruguai na Copa de 1950 no Maracanã. Com ~200 mil torcedores, o Brasil precisava de um empate mas perdeu por 2×1 — o maior trauma do esporte brasileiro.</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ────────────────────────────────────────────────── -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row g-4 g-lg-5">
-
-        <div class="col-lg-4">
-          <div class="footer-logo mb-2">SELEÇÃO <span>BRASILEIRA</span></div>
-          <p class="footer-desc">Pentacampeã mundial e única seleção presente em todas as 22 edições da Copa do Mundo FIFA.</p>
-          <div class="d-flex gap-2 mt-3">
-            <a href="https://www.instagram.com/brasil/?hl=pt" class="social-btn"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/CBF_Futebol" class="social-btn"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.youtube.com/channel/UCdQuDaRww5NkKpQQ1BJBWww" class="social-btn"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.facebook.com/CBF/?locale=pt_BR" class="social-btn"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.tiktok.com/@brasil" class="social-btn"><i class="bi bi-tiktok"></i></a>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <div class="footer-heading">Navegar</div>
-          <ul class="footer-links">
-            <li><a href="#historia">História</a></li>
-            <li><a href="#titulos">Títulos</a></li>
-            <li><a href="#lendas">Lendas</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#timeline">Cronologia</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <div class="footer-heading">Títulos</div>
-          <ul class="footer-links">
-            <li><a href="#titulos">1958 — Suécia</a></li>
-            <li><a href="#titulos">1962 — Chile</a></li>
-            <li><a href="#titulos">1970 — México</a></li>
-            <li><a href="#titulos">1994 — EUA</a></li>
-            <li><a href="#titulos">2002 — Ásia</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="footer-heading">Números</div>
-          <div class="row g-2">
-            <div class="col-6">
-              <div class="footer-stat-box">
-                <div class="fsb-n" style="color: var(--amarelo)">5</div>
-                <div class="fsb-l">Copas Ganhas</div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="footer-stat-box">
-                <div class="fsb-n" style="color: var(--verde)">22</div>
-                <div class="fsb-l">Participações</div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="footer-stat-box">
-                <div class="fsb-n" style="color: var(--amarelo)">237</div>
-                <div class="fsb-l">Gols em Copas</div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="footer-stat-box">
-                <div class="fsb-n" style="color: var(--verde)">76</div>
-                <div class="fsb-l">Vitórias</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 · Seleção Brasileira — A Canarinha do Mundo · Feito com <i class="bi bi-heart-fill text-danger"></i> no Brasil</p>
-        <div class="flag-strip" style="width: 60px; border-radius: 3px;"></div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ── FLAG FUNDO ──────────────────────────────────────────── -->
-  <div class="flag-strip"></div>
-
-  <!-- ── BACK TO TOP ─────────────────────────────────────────── -->
-  <button id="btt" title="Voltar ao topo">
-    <i class="bi bi-chevron-up"></i>
-  </button>
-
-  <!-- ── MODAL LIGHTBOX ──────────────────────────────────────── -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content lightbox-content">
-        <div class="modal-body p-0 position-relative">
-          <button class="lb-arrow lb-prev" id="lbPrev"><i class="bi bi-chevron-left"></i></button>
-          <button class="lb-arrow lb-next" id="lbNext"><i class="bi bi-chevron-right"></i></button>
-          <span class="lb-counter" id="lbCounter">1 / 6</span>
-          <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3"
-                  data-bs-dismiss="modal" style="filter: invert(1)"></button>
-          <img src="" alt="" id="lbImg" class="lb-img" width="900" height="600"/>
-          <div class="lb-caption" id="lbCaption"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── MODAL PELÉ ───────────────────────────────────────────── -->
-  <div class="modal fade" id="modalPele" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content pele-modal-content">
-        <div class="modal-header pele-modal-header">
-          <h5 class="modal-title pele-modal-title">
-            <i class="bi bi-star-fill me-2" style="color: var(--amarelo)"></i>PELÉ — O Rei do Futebol
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" style="filter: invert(1)"></button>
-        </div>
-        <div class="modal-body p-0">
-          <div class="row g-0">
-            <div class="col-md-5 position-relative">
-              <img src="img/pele.jpg" alt="Pelé" width="400" height="480"
-                   class="pele-modal-img" loading="lazy"/>
-              <div class="pele-modal-img-overlay"></div>
-              <div class="pele-modal-img-name">
-                <div class="pele-modal-name-title">PELÉ</div>
-                <div class="pele-modal-name-sub">O Rei do Futebol</div>
-              </div>
-            </div>
-            <div class="col-md-7 p-4">
-              <div class="d-flex flex-wrap gap-2 mb-3">
-                <span class="chip chip-green">Tricampeão Mundial</span>
-                <span class="chip chip-yellow">1958 · 1962 · 1970</span>
-              </div>
-              <h4 class="pele-modal-fullname">Edson Arantes do Nascimento</h4>
-              <p class="pele-modal-bio">Nascido em 23 de outubro de 1940, estreou na Seleção com 16 anos e conquistou sua primeira Copa do Mundo aos 17 — o mais jovem campeão mundial da história.</p>
-              <p class="pele-modal-bio mt-2">Único tricampeão mundial (1958, 1962 e 1970), é universalmente reconhecido como o maior jogador de todos os tempos, com 77 gols em 92 jogos pela Seleção.</p>
-              <hr class="pele-modal-divider"/>
-              <div class="row g-3">
-                <div class="col-6"><div class="pele-stat"><div class="ps-n">3</div><div class="ps-l">Copas do Mundo</div></div></div>
-                <div class="col-6"><div class="pele-stat"><div class="ps-n">77</div><div class="ps-l">Gols pela Seleção</div></div></div>
-                <div class="col-6"><div class="pele-stat"><div class="ps-n">92</div><div class="ps-l">Jogos pela Seleção</div></div></div>
-                <div class="col-6"><div class="pele-stat"><div class="ps-n">1281</div><div class="ps-l">Gols na Carreira</div></div></div>
-              </div>
+            <h4 class="pele-modal-fullname">Edson Arantes do Nascimento</h4>
+            <p class="pele-modal-bio">Nascido em 23 de outubro de 1940, estreou na Seleção com 16 anos e conquistou sua primeira Copa do Mundo aos 17 — o mais jovem campeão mundial da história.</p>
+            <p class="pele-modal-bio mt-2">Único tricampeão mundial (1958, 1962 e 1970), é universalmente reconhecido como o maior jogador de todos os tempos, com 77 gols em 92 jogos pela Seleção.</p>
+            <hr class="pele-modal-divider"/>
+            <div class="row g-3">
+              <div class="col-6"><div class="pele-stat"><div class="ps-n">3</div><div class="ps-l">Copas do Mundo</div></div></div>
+              <div class="col-6"><div class="pele-stat"><div class="ps-n">77</div><div class="ps-l">Gols pela Seleção</div></div></div>
+              <div class="col-6"><div class="pele-stat"><div class="ps-n">92</div><div class="ps-l">Jogos pela Seleção</div></div></div>
+              <div class="col-6"><div class="pele-stat"><div class="ps-n">1281</div><div class="ps-l">Gols na Carreira</div></div></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ── BOOTSTRAP JS ─────────────────────────────────────────── -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS próprio — SEMPRE nessa ordem -->
-  <script src="js/theme.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
