@@ -307,101 +307,128 @@
         <div class="eyebrow rv">Conquistas</div>
         <h2 class="sec-title rv d1">As <span class="hl-y">Cinco Estrelas</span></h2>
       </div>
-      <div class="row g-4">
+      <!-- Substitui o <div class="row g-4"> inteiro da seção #titulos -->
 
-        <div class="col-sm-6 col-lg-4 rv d1">
-          <div class="copa-card">
-            <img src="img/copa-1958.jpg" alt="Copa 1958 Suécia" width="400" height="250" loading="lazy"/>
-            <div class="copa-overlay"></div>
-            <div class="copa-body">
-              <div class="copa-year">1958</div>
-              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Suécia</div>
-              <p class="copa-desc">Pelé, 17 anos, marca 2 na final. Brasil 5×2 Suécia.</p>
-              <div class="d-flex gap-1 flex-wrap mt-2">
-                <span class="chip chip-green" style="font-size:.63rem">Pelé — 17 anos</span>
-                <span class="chip chip-yellow" style="font-size:.63rem">Garrincha</span>
-              </div>
-            </div>
-            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-            <div class="copa-tag">★ I</div>
+<div id="copasCarousel" class="carousel slide" data-bs-ride="false">
+
+  <!-- Indicadores de ponto -->
+  <div class="carousel-indicators copas-indicators">
+    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="0" class="active" aria-label="1958"></button>
+    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="1" aria-label="1962"></button>
+    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="2" aria-label="1970"></button>
+    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="3" aria-label="1994"></button>
+    <button type="button" data-bs-target="#copasCarousel" data-bs-slide-to="4" aria-label="2002"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner copas-inner">
+
+    <div class="carousel-item active">
+      <div class="copa-card copa-card-solo">
+        <img src="img/copa-1958.jpg" alt="Copa 1958 Suécia" width="800" height="420" loading="lazy"/>
+        <div class="copa-overlay"></div>
+        <div class="copa-body">
+          <div class="copa-year">1958</div>
+          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Suécia</div>
+          <p class="copa-desc">Pelé, 17 anos, marca 2 na final. Brasil 5×2 Suécia.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <span class="chip chip-green">Pelé — 17 anos</span>
+            <span class="chip chip-yellow">Garrincha</span>
           </div>
         </div>
-
-        <div class="col-sm-6 col-lg-4 rv d2">
-          <div class="copa-card">
-            <img src="img/copa-1962.jpg" alt="Copa 1962 Chile" width="400" height="250" loading="lazy"/>
-            <div class="copa-overlay"></div>
-            <div class="copa-body">
-              <div class="copa-year">1962</div>
-              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Chile</div>
-              <p class="copa-desc">Garrincha carrega o Brasil. Pelé se machuca na 2ª rodada.</p>
-              <div class="d-flex gap-1 flex-wrap mt-2">
-                <span class="chip chip-green" style="font-size:.63rem">Garrincha MVP</span>
-                <span class="chip chip-yellow" style="font-size:.63rem">Vavá</span>
-              </div>
-            </div>
-            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-            <div class="copa-tag">★ II</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-4 rv d3">
-          <div class="copa-card">
-            <img src="img/copa-1970.jpg" alt="Copa 1970 México" width="400" height="250" loading="lazy"/>
-            <div class="copa-overlay"></div>
-            <div class="copa-body">
-              <div class="copa-year">1970</div>
-              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>México</div>
-              <p class="copa-desc">A melhor seleção da história. 6 jogos, 6 vitórias, 19 gols.</p>
-              <div class="d-flex gap-1 flex-wrap mt-2">
-                <span class="chip chip-green" style="font-size:.63rem">Pelé tricampeão</span>
-                <span class="chip chip-yellow" style="font-size:.63rem">Rivelino</span>
-              </div>
-            </div>
-            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-            <div class="copa-tag">★ III</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-6 rv d1">
-          <div class="copa-card">
-            <img src="img/copa-1994.jpg" alt="Copa 1994 EUA" width="600" height="250" loading="lazy"/>
-            <div class="copa-overlay"></div>
-            <div class="copa-body">
-              <div class="copa-year">1994</div>
-              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Estados Unidos</div>
-              <p class="copa-desc">24 anos de espera. Romário e Bebeto. Tetra nos pênaltis contra a Itália.</p>
-              <div class="d-flex gap-1 flex-wrap mt-2">
-                <span class="chip chip-green" style="font-size:.63rem">Romário MVP</span>
-                <span class="chip chip-yellow" style="font-size:.63rem">Bebeto</span>
-              </div>
-            </div>
-            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-            <div class="copa-tag">★ IV</div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-6 rv d2">
-          <div class="copa-card">
-            <img src="img/copa-2002.jpg" alt="Brasil 2002 Penta" width="600" height="250" loading="lazy"/>
-            <div class="copa-overlay"></div>
-            <div class="copa-body">
-              <div class="copa-year">2002</div>
-              <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Coreia do Sul · Japão</div>
-              <p class="copa-desc">O PENTA! Ronaldo marca 2 na final. 7 jogos, 7 vitórias.</p>
-              <div class="d-flex gap-1 flex-wrap mt-2">
-                <span class="chip chip-green" style="font-size:.63rem">Ronaldo 8 gols</span>
-                <span class="chip chip-yellow" style="font-size:.63rem">Rivaldo</span>
-                <span class="chip chip-blue" style="font-size:.63rem">Ronaldinho</span>
-              </div>
-            </div>
-            <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
-            <div class="copa-tag">★ V</div>
-          </div>
-        </div>
-
+        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+        <div class="copa-tag">★ I</div>
       </div>
     </div>
+
+    <div class="carousel-item">
+      <div class="copa-card copa-card-solo">
+        <img src="img/copa-1962.jpg" alt="Copa 1962 Chile" width="800" height="420" loading="lazy"/>
+        <div class="copa-overlay"></div>
+        <div class="copa-body">
+          <div class="copa-year">1962</div>
+          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Chile</div>
+          <p class="copa-desc">Garrincha carrega o Brasil. Pelé se machuca na 2ª rodada.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <span class="chip chip-green">Garrincha MVP</span>
+            <span class="chip chip-yellow">Vavá</span>
+          </div>
+        </div>
+        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+        <div class="copa-tag">★ II</div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="copa-card copa-card-solo">
+        <img src="img/copa-1970.jpg" alt="Copa 1970 México" width="800" height="420" loading="lazy"/>
+        <div class="copa-overlay"></div>
+        <div class="copa-body">
+          <div class="copa-year">1970</div>
+          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>México</div>
+          <p class="copa-desc">A melhor seleção da história. 6 jogos, 6 vitórias, 19 gols.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <span class="chip chip-green">Pelé tricampeão</span>
+            <span class="chip chip-yellow">Rivelino</span>
+          </div>
+        </div>
+        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+        <div class="copa-tag">★ III</div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="copa-card copa-card-solo">
+        <img src="img/copa-1994.jpg" alt="Copa 1994 EUA" width="800" height="420" loading="lazy"/>
+        <div class="copa-overlay"></div>
+        <div class="copa-body">
+          <div class="copa-year">1994</div>
+          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Estados Unidos</div>
+          <p class="copa-desc">24 anos de espera. Romário e Bebeto. Tetra nos pênaltis contra a Itália.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <span class="chip chip-green">Romário MVP</span>
+            <span class="chip chip-yellow">Bebeto</span>
+          </div>
+        </div>
+        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+        <div class="copa-tag">★ IV</div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="copa-card copa-card-solo">
+        <img src="img/copa-2002.jpg" alt="Brasil 2002 Penta" width="800" height="420" loading="lazy"/>
+        <div class="copa-overlay"></div>
+        <div class="copa-body">
+          <div class="copa-year">2002</div>
+          <div class="copa-where"><i class="bi bi-geo-alt-fill me-1"></i>Coreia do Sul · Japão</div>
+          <p class="copa-desc">O PENTA! Ronaldo marca 2 na final. 7 jogos, 7 vitórias.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <span class="chip chip-green">Ronaldo 8 gols</span>
+            <span class="chip chip-yellow">Rivaldo</span>
+            <span class="chip chip-blue">Ronaldinho</span>
+          </div>
+        </div>
+        <div class="copa-trophy"><i class="bi bi-trophy-fill"></i></div>
+        <div class="copa-tag">★ V</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Setas de navegação -->
+  <button class="carousel-control-prev copas-prev" type="button"
+          data-bs-target="#copasCarousel" data-bs-slide="prev">
+    <i class="bi bi-chevron-left"></i>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next copas-next" type="button"
+          data-bs-target="#copasCarousel" data-bs-slide="next">
+    <i class="bi bi-chevron-right"></i>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+
+</div>
   </section>
 
   <!-- ── LENDAS ───────────────────────────────────────────────── -->
@@ -423,7 +450,7 @@
             </div>
             <div class="legend-body">
               <div class="legend-pos">
-                Atacante · 1957–1971
+                Atacante · 1958–1970
                 <span class="badge ms-1" style="background: var(--amarelo); color: var(--azul); font-size: .58rem;">Ver mais</span>
               </div>
               <div class="legend-name">PELÉ</div>
@@ -445,7 +472,7 @@
               <div class="legend-num">7</div>
             </div>
             <div class="legend-body">
-              <div class="legend-pos">Ponta-Direita · 1955–1966</div>
+              <div class="legend-pos">Ponta-Direita · 1958–1966</div>
               <div class="legend-name">GARRINCHA</div>
               <p class="legend-desc">Anjo das Pernas Tortas. Em 40 jogos ao lado de Pelé, jamais perdeu.</p>
               <div class="legend-stats">
@@ -485,7 +512,7 @@
               <div class="legend-num">11</div>
             </div>
             <div class="legend-body">
-              <div class="legend-pos">Meia · 2001–2013</div>
+              <div class="legend-pos">Meia · 2002–2006</div>
               <div class="legend-name">RONALDINHO</div>
               <p class="legend-desc">O Bruxo. Melhor do mundo em 2004–05. Dribles impossíveis e sorriso eterno.</p>
               <div class="legend-stats">
@@ -505,7 +532,7 @@
               <div class="legend-num">10</div>
             </div>
             <div class="legend-body">
-              <div class="legend-pos">Meia-Atacante · 2010–atual</div>
+              <div class="legend-pos">Meia-Atacante · 2014–atual</div>
               <div class="legend-name">NEYMAR JR.</div>
               <p class="legend-desc">O maior artilheiro da história da Seleção. Herdeiro da camisa 10 e líder da geração atual.</p>
               <div class="legend-stats">
@@ -844,7 +871,7 @@
               </h2>
               <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <strong style="color: var(--amarelo)">Neymar Jr.</strong> é o maior artilheiro da história da Seleção, tendo superado o recorde histórico de Pelé (77 gols) em outubro de 2023 durante partida contra a Bolívia. Nas Copas especificamente, <strong style="color: var(--amarelo)">Ronaldo Fenômeno</strong> lidera com 15 gols em 1998 e 2002.
+                  <strong style="color: var(--amarelo)">Neymar Jr.</strong> é o maior artilheiro da história da Seleção, tendo superado o recorde histórico de Pelé (77 gols) em setembro de 2023 durante partida contra a Bolívia. Nas Copas especificamente, <strong style="color: var(--amarelo)">Ronaldo Fenômeno</strong> lidera com 15 gols em 1998 e 2002.
                 </div>
               </div>
             </div>
@@ -897,11 +924,11 @@
           <div class="footer-logo mb-2">SELEÇÃO <span>BRASILEIRA</span></div>
           <p class="footer-desc">Pentacampeã mundial e única seleção presente em todas as 22 edições da Copa do Mundo FIFA.</p>
           <div class="d-flex gap-2 mt-3">
-            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.instagram.com/brasil/?hl=pt" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com/CBF_Futebol" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.youtube.com/channel/UCdQuDaRww5NkKpQQ1BJBWww" class="social-btn"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/CBF/?locale=pt_BR" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.tiktok.com/@brasil" class="social-btn"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
 
